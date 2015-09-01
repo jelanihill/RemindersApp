@@ -8,5 +8,7 @@ namespace RemindersApp.Models
         public int PersonId { get; set; }
         public string Content { get; set; }
         public DateTime CreationTime { get; set; }
+
+        public virtual Person Person { get; set; }
     }
 }

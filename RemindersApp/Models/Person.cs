@@ -8,6 +8,6 @@ namespace RemindersApp.Models
         public string Firstname{ get; set; }
         public string Lastname { get; set; }
 
-        public IList<Message> Messages { get; set; }
+        public virtual ICollection<Message> Messages { get; set; }
     }
 }

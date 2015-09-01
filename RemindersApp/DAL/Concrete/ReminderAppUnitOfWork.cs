@@ -16,6 +16,7 @@ namespace RemindersApp.DAL.Concrete
         {
             _personRepo = new EfGenericRepository<Person>(People);
             _messageRepo = new EfGenericRepository<Message>(Messages);
+            base.Configuration.ProxyCreationEnabled = false;
         }
 
         public IGenericRepository<Person> PersonRepository

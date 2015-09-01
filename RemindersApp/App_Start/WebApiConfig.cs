@@ -20,7 +20,7 @@ namespace RemindersApp
             //Attribute Routing
             config.MapHttpAttributeRoutes();
 
-            config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
+            //config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
 
             //Convention-based Routing         
             config.Routes.MapHttpRoute(

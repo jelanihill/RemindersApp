@@ -3,6 +3,7 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using RemindersApp.DAL;
@@ -21,9 +22,10 @@ namespace RemindersApp.Controllers
         }
 
         [HttpGet]
-        public IQueryable<Person> GetPeople()
+        public HttpResponseMessage GetPeople()
         {
-            return _context.PersonRepository.GetAll().AsQueryable();
+            var people = _context.PersonRepository.GetAll();
+            return Request.CreateResponse(HttpStatusCode.OK, people);
         }
             
         [HttpGet]
